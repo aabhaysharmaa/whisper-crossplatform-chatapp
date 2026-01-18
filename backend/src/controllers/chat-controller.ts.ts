@@ -2,7 +2,6 @@ import type { NextFunction, Request, Response } from "express"
 import type { AuthRequest } from "../middleware/auth"
 import Chat from "../models/Chat";
 import { Types } from "mongoose";
-
 export const getChats = async (req: AuthRequest, res: Response, next: NextFunction) => {
 	try {
 		const userId = req.userId;

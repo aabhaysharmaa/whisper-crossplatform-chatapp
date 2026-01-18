@@ -3,9 +3,9 @@ import express, { type Request, type Response } from "express";
 const app = express();
 
 import authRoutes from "./routes/auth-route";
-import chatRoutes from "./routes/auth-route";
-import messageRoutes from "./routes/auth-route";
-import userRoutes from "./routes/auth-route";
+import chatRoutes from "./routes/chat-route";
+import messageRoutes from "./routes/message-route";
+import userRoutes from "./routes/user-route";
 import { clerkMiddleware } from "@clerk/express";
 import { errorHandler } from "./middleware/errorhandler";
 

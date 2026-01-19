@@ -1,10 +1,11 @@
 import { useAuth } from '@clerk/clerk-expo'
 import React from 'react'
-import { Text, ScrollView, Pressable } from 'react-native'
+import { Text, ScrollView, Pressable } from 'react-native';
+
 
 
 const Chats = () => {
-	const {signOut} = useAuth();
+	const { signOut } = useAuth();
 	return (
 		<ScrollView className="bg-surface"
 			contentInsetAdjustmentBehavior='automatic'

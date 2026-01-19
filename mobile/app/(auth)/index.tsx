@@ -31,12 +31,15 @@ const AuthScreen = () => {
 						<Text className=' font-bold text-3xl text-primary font-mono   text-center'>Seamlessly</Text>
 						{/* Auth Buttons */}
 						<View className='flex flex-row mt-10 gap-4'>
-							<Pressable className='w-1/2  flex flex-1 flex-row items-center justify-center  active:scale-[0.97] gap-2 bg-white/90  py-4 rounded-2xl'
+							<Pressable
+								accessibilityRole='button'
+
+								className='w-1/2  flex flex-1 flex-row items-center justify-center  active:scale-[0.97] gap-2 bg-white/90  py-4 rounded-2xl'
 								disabled={loadingStrategy === "oauth_google"}
 								onPress={() => handleSocialAuth("oauth_google")}
 							>
 								{/* */}
-								{loadingStrategy === "oauth_google" ? (<ActivityIndicator size={"small"} color={"#1a1a1a"} />) : (
+								{loadingStrategy === "oauth_apple" || loadingStrategy === "oauth_google" ? (<ActivityIndicator size={"small"} color={"#1a1a1a"} />) : (
 									<>
 
 
@@ -49,8 +52,11 @@ const AuthScreen = () => {
 									</>
 								)}
 							</Pressable>
-							<Pressable className='w-1/2  flex flex-1 flex-row items-center justify-center  active:scale-[0.97] gap-2 bg-white/10  py-4 rounded-2xl'
-								disabled={loadingStrategy === "oauth_apple"}
+							<Pressable
+
+								accessibilityRole='button'
+								className='w-1/2  flex flex-1 flex-row items-center justify-center  active:scale-[0.97] gap-2 bg-white/10  py-4 rounded-2xl'
+								disabled={loadingStrategy === "oauth_apple" || loadingStrategy === "oauth_google"}
 								onPress={() => handleSocialAuth("oauth_apple")}
 							>
 								{/* */}

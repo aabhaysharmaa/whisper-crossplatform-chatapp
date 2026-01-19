@@ -6,6 +6,11 @@ import { Text, ScrollView, Pressable } from 'react-native';
 
 const Chats = () => {
 	const { signOut } = useAuth();
+import { Text, ScrollView, Pressable } from 'react-native'
+
+
+const Chats = () => {
+	const {signOut} = useAuth();
 	return (
 		<ScrollView className="bg-surface"
 			contentInsetAdjustmentBehavior='automatic'
